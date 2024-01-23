@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrie en VueJS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<body>
+    <div class="calculatrice" id="app">
+        <h1>Calculatrice en VueJS</h1>
+        <table>
+            <tr>
+              <td colspan="4">
+                <input type="text" id="display" readonly>
+              </td>
+            </tr>
+            <tr>
+              <td><button id="1">1</button></td>
+              <td><button id="2">2</button></td>
+              <td><button id="3">3</button></td>
+              <td><button id="+" class="assetbtn">+</button></td>
+            </tr>
+            <tr>
+              <td><button id="4">4</button></td>
+              <td><button id="5">5</button></td>
+              <td><button id="6">6</button></td>
+              <td><button class="assetbtn">-</button></td>
+            </tr>
+            <tr>
+              <td><button>7</button></td>
+              <td><button>8</button></td>
+              <td><button>9</button></td>
+              <td><button class="assetbtn">*</button></td>
+            </tr>
+            <tr>
+              <td><button>0</button></td>
+              <td><button>.</button></td>
+              <td><button  class="assetbtn">C</button></td>
+              <td><button class="assetbtn">/</button></td>
+            </tr>
+            <tr> 
+              <td colspan="2"><button class="assetbtn">(</button></td>
+              <td colspan="2"><button class="assetbtn">)</button></td>
+            </tr>
+            <tr>
+              <td colspan="4"><button class="assetbtn" onclick="">=</button></td>
+            </tr>
+          </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

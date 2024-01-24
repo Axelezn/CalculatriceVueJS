@@ -13,39 +13,39 @@
         <table>
             <tr>
               <td colspan="4">
-                <input type="text" id="display" readonly>
+                <p id="display">{{log + current || 0}}</p>
               </td>
             </tr>
             <tr>
-              <td><button id="1">1</button></td>
-              <td><button id="2">2</button></td>
-              <td><button id="3">3</button></td>
-              <td><button id="+" class="assetbtn">+</button></td>
+              <td><button @click="BtnClick('1')" id="1">1</button></td>
+              <td><button @click="BtnClick('2')" id="2">2</button></td>
+              <td><button @click="BtnClick('3')" id="3">3</button></td>
+              <td><button @click="BtnClick('+')" id="+" class="assetbtn">+</button></td>
             </tr>
             <tr>
-              <td><button id="4">4</button></td>
-              <td><button id="5">5</button></td>
-              <td><button id="6">6</button></td>
-              <td><button class="assetbtn">-</button></td>
+              <td><button @click="BtnClick('4')" id="4">4</button></td>
+              <td><button @click="BtnClick('5')" id="5">5</button></td>
+              <td><button @click="BtnClick('6')" id="6">6</button></td>
+              <td><button @click="BtnClick('-')" class="assetbtn">-</button></td>
             </tr>
             <tr>
-              <td><button>7</button></td>
-              <td><button>8</button></td>
-              <td><button>9</button></td>
-              <td><button class="assetbtn">*</button></td>
+              <td><button @click="BtnClick('7')">7</button></td>
+              <td><button @click="BtnClick('8')">8</button></td>
+              <td><button @click="BtnClick('9')">9</button></td>
+              <td><button @click="BtnClick('*')" class="assetbtn">*</button></td>
             </tr>
             <tr>
-              <td><button>0</button></td>
-              <td><button>.</button></td>
-              <td><button  class="assetbtn">C</button></td>
-              <td><button class="assetbtn">/</button></td>
+              <td><button @click="BtnClick('0')">0</button></td>
+              <td><button @click="dot()">.</button></td>
+              <td><button @click="clear()" class="assetbtn">C</button></td>
+              <td><button @click="BtnClick('/')" class="assetbtn">/</button></td>
             </tr>
             <tr> 
-              <td colspan="2"><button class="assetbtn">(</button></td>
-              <td colspan="2"><button class="assetbtn">)</button></td>
+              <td><button @click="changeSigne()" class="assetbtn">+/-</button></td>
+              <td ><button @click="toPercent()" class="assetbtn">%</button></td>
             </tr>
             <tr>
-              <td colspan="4"><button class="assetbtn" onclick="">=</button></td>
+              <td colspan="4"><button class="assetbtn" @click="Calculer()">=</button></td>
             </tr>
           </table>
     </div>

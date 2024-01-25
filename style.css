@@ -68,3 +68,7 @@ body {
 #var {
   opacity: 50%;
 }
+#display {
+  border:solid 2px #9bd3ae;
+  padding: 0.2em;
+}

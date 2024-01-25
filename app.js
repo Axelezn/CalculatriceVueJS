@@ -42,5 +42,34 @@ new Vue({
         this.current = `${this.current}.`;
       }
     },
+    multiply() {
+      this.addtoLog("*");
+    },
+    divide() {
+      this.addtoLog("/");
+    },
+    minus() {
+      this.addtoLog("-");
+    },
+    add() {
+      this.addtoLog("+");
+    },
+    addtoLog(operator) {
+      if (this.clicked == false) {
+        this.log += `${this.current}${operator}`;
+        this.current = "";
+        this.clicked = true;
+      }
+    },
+    equal() {
+      if (this.clicked == false) {
+        this.answer = eval(this.log + this.current);
+      } else {
+        this.answer = "Problème. veuillez reload votre page";
+      }
+      this.current = this.answer;
+      this.answer = "";
+      this.log = "";
+    },
   },
 });
